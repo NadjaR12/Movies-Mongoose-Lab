@@ -8,11 +8,12 @@
     <input type="text" name="genre" >
     <label for="plot">Plot: </label>
     <input type="text" name="plot">
+
     <label for="cast">Cast:</label>
-    <select name="cast" id="cast">
-       
-        <option value="cast"></option>
-    
+    <select name="cast" id="cast" multiple>  
+    {{#each celebritiesFromDb}}
+        <option value="{{this._id}}">{{this.name}}</option>
+    {{/each}}
     </select>
 
     <button type="submit">Add new Movie</button>

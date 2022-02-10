@@ -2,7 +2,7 @@ const Celebrity = require("../models/Celebrity.model");
 
 const router = require("express").Router();
 
-// Iteration #2: Listing Our Celebrities
+// Iteration #2: Listing All Celebrities
 router.get("/celebrities", (req, res, next) => {
     Celebrity.find()
         .then(celebritiesFromDB => {
@@ -18,8 +18,6 @@ router.get("/celebrities", (req, res, next) => {
 router.get("/celebrities/new", (req, res, next) => {
         res.render('celebrities/new')
 })
-
-
 
 // Iteration #3: The Celebrity Details Page
 router.get("/celebrities/:id", (req, res, next) => {
